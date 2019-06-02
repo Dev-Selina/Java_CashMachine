@@ -5,27 +5,47 @@ import java.util.Scanner;
 public class CashMachine {
 
     Scanner in = new Scanner(System.in);
+    String user = "Lobster";
+    int pin = 1900;
+    int numberOfPinAttempts = 0;
 
     void login() {
-        String user = "Lobster";
-        int pin = 1900;
+
 
         System.out.println("User: ");
         String username = in.next();
 
-
+        checkUsernameIsCorrect(username);
+        checkPinMatches();
         System.out.println("Pin: ");
         int pinNumber = in.nextInt();
+        numberOfPinAttempts = numberOfPinAttempts + 1;
 
-        if (username.equals(user) && pinNumber == pin) {
-            cashMachineMenu();
-        } else if (!username.equals(user) && pinNumber == pin){
-            System.out.println("Incorrect username.");
-        } else if (username.equals(user) && pinNumber != pin){
-            System.out.println("Pin number does not match.");
+        if (numberOfPinAttempts <= 3) {
+            checkUserPinIsCorrect(pinNumber, username);
         }
+        else {
+            System.out.println("Too many attempts failed.");
+        }
+    }
 
+    void checkUsernameIsCorrect(String username) {
+        if (!username.equals(user)) {
+            System.out.println("Incorrect username. Please re-enter again.\n");
+            login();
+        }
+    }
+   void checkPinMatches(){
 
+   }
+
+    void checkUserPinIsCorrect(int pinNumber, String username) {
+        if (pinNumber != pin) {
+            System.out.println("Pin number does not match.\n");
+            login();
+        } else if (username.equals(user) && pinNumber == pin) {
+            cashMachineMenu();
+        }
     }
 
     void cashMachineMenu() {
@@ -44,6 +64,7 @@ public class CashMachine {
                 cashMachineMenu();
         }
     }
+
 
     void currentAccount() {
         System.out.println("Current Account Info");
@@ -67,7 +88,8 @@ public class CashMachine {
                 currentAccount();
         }
     }
-    void checkBalance(){
+
+    void checkBalance() {
         System.out.println("Current Account\nBalance: ");
 
     }
