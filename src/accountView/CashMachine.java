@@ -12,12 +12,20 @@ public class CashMachine {
 
         System.out.println("User: ");
         String username = in.next();
+
+
         System.out.println("Pin: ");
         int pinNumber = in.nextInt();
 
         if (username.equals(user) && pinNumber == pin) {
             cashMachineMenu();
+        } else if (!username.equals(user) && pinNumber == pin){
+            System.out.println("Incorrect username.");
+        } else if (username.equals(user) && pinNumber != pin){
+            System.out.println("Pin number does not match.");
         }
+
+
     }
 
     void cashMachineMenu() {
@@ -43,7 +51,7 @@ public class CashMachine {
         int option = in.nextInt();
         switch (option) {
             case 1:
-                System.out.println("Current Account\nBalance: ");
+                checkBalance();
                 break;
             case 2:
                 System.out.println("Current Account\nWithdrawal: ");
@@ -58,6 +66,10 @@ public class CashMachine {
                 System.out.println("Invalid option choice, please try again.");
                 currentAccount();
         }
+    }
+    void checkBalance(){
+        System.out.println("Current Account\nBalance: ");
+
     }
 
     public static void main(String args[]) {
