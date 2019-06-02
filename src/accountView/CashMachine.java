@@ -9,40 +9,43 @@ public class CashMachine {
     int pin = 1900;
     int numberOfPinAttempts = 0;
 
-    void login() {
+    void login(String username) { //notes for next amends re-jig username arg as not going to work
 
+        checkUsernameIsCorrect();
+        checkPinMatches(username);
 
+    }
+
+    String checkUsernameIsCorrect() {
         System.out.println("User: ");
         String username = in.next();
+        if (!username.equals(user)) {
+            System.out.println("Incorrect username. Please re-enter again.\n");
+            login(username);
+        }return username;
+    }
 
-        checkUsernameIsCorrect(username);
-        checkPinMatches();
+    void checkPinMatches(String username) {
         System.out.println("Pin: ");
         int pinNumber = in.nextInt();
+        checkNumOfPinAttempts(pinNumber);
+        checkUserPinIsCorrect(pinNumber, username);
+    }
+
+    void checkNumOfPinAttempts(int pinNumber) {
         numberOfPinAttempts = numberOfPinAttempts + 1;
 
         if (numberOfPinAttempts <= 3) {
-            checkUserPinIsCorrect(pinNumber, username);
-        }
-        else {
+            //check complete
+        } else {
             System.out.println("Too many attempts failed.");
         }
     }
 
-    void checkUsernameIsCorrect(String username) {
-        if (!username.equals(user)) {
-            System.out.println("Incorrect username. Please re-enter again.\n");
-            login();
-        }
-    }
-   void checkPinMatches(){
-
-   }
-
     void checkUserPinIsCorrect(int pinNumber, String username) {
         if (pinNumber != pin) {
             System.out.println("Pin number does not match.\n");
-            login();
+            checkNumOfPinAttempts(pinNumber);
         } else if (username.equals(user) && pinNumber == pin) {
             cashMachineMenu();
         }
