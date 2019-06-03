@@ -37,6 +37,7 @@ public class CashMachine {
 
         if (numberOfPinAttempts <= 3) {
             //check complete
+            System.out.println("checking.../n attempt no:" + numberOfPinAttempts);
         } else {
             System.out.println("Too many attempts failed.");
         }
