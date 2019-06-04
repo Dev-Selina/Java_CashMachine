@@ -89,7 +89,7 @@ public class CashMachine {
         int option = in.nextInt();
         switch (option) {
             case 1:
-                checkBalance();
+                checkBalance(userBalance);
                 break;
             case 2:
                 withdraw(userBalance);
@@ -106,31 +106,35 @@ public class CashMachine {
         }
     }
 
-    private void withdraw(int userBalance) {
+    private int withdraw(int userBalance) {
         System.out.println("Current Account\n------------------\nWithdraw: £");
         int withdrawalAmount = in.nextInt();
-        System.out.println("£" + userBalance + " - " + "£" + withdrawalAmount);
-        if (userBalance >= withdrawalAmount){
+        int newBalance = 0;
+        if (userBalance >= withdrawalAmount) {
             //withdraw money from selected account
-            int newBalance = userBalance - withdrawalAmount;
-            System.out.println("New Balance: £" + newBalance);
+            newBalance = userBalance - withdrawalAmount;
             userBalance = newBalance;
+            System.out.println(userBalance + "\nDo you want to perform another transaction?\nYes\nNo");
+            doAnotherAccountAction();
         } else {
             System.out.println("Not enough monies available.");
             System.exit(0);
         }
-
+        return userBalance;
     }
 
-    private void checkBalance() {
+    private void checkBalance(int userBalance) {
         System.out.println("Current Account\n------------------\nBalance: £" + userBalance + "\nDo you want to perform another transaction?\nYes\nNo");
+        doAnotherAccountAction();
+    }
+
+    private void doAnotherAccountAction() {
         String option = in.next();
         if (option.contains("Y")) {
             currentAccount();
         } else {
             System.exit(0);
         }
-
     }
 
     public static void main(String args[]) {
