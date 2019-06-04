@@ -7,46 +7,52 @@ public class CashMachine {
     Scanner in = new Scanner(System.in);
     String user = "Lobster";
     int pin = 1900;
-    int numberOfPinAttempts = 0;
+    int numberOfPinAttempts, numberOfUsernameAttempts;
 
-    void login(String username) { //notes for next amends re-jig username arg as not going to work
-
-        checkUsernameIsCorrect();
-        checkPinMatches(username);
-
-    }
-
-    String checkUsernameIsCorrect() {
+    void login() {
         System.out.println("User: ");
         String username = in.next();
-        if (!username.equals(user)) {
-            System.out.println("Incorrect username. Please re-enter again.\n");
-            login(username);
-        }return username;
+        checkUsernameIsCorrect(username);
+        pinIsEntered(username);
     }
 
-    void checkPinMatches(String username) {
+    private int pinIsEntered(String username) {
         System.out.println("Pin: ");
         int pinNumber = in.nextInt();
-        checkNumOfPinAttempts(pinNumber);
         checkUserPinIsCorrect(pinNumber, username);
+        return pinNumber;
     }
 
-    void checkNumOfPinAttempts(int pinNumber) {
+
+    String checkUsernameIsCorrect(String username) {
+
+        if (!username.equals(user)) {
+            numberOfUsernameAttempts = numberOfUsernameAttempts + 1;
+            if (numberOfUsernameAttempts <= 2) {
+                System.out.println("Try no: " + numberOfUsernameAttempts + "\nIncorrect username.\nPlease re-enter again.\n");
+                login();
+            } else {
+                System.out.println("Try no: " + numberOfUsernameAttempts + "\nToo many failed attempts on entering username.");
+                System.exit(0);
+            }
+        }
+        return username;
+    }
+
+    void checkUserPinIsCorrect(int pinNumber, String username) {
         numberOfPinAttempts = numberOfPinAttempts + 1;
 
         if (numberOfPinAttempts <= 3) {
             //check complete
-            System.out.println("checking.../n attempt no:" + numberOfPinAttempts);
+            System.out.println("checking...\nAttempt no: " + numberOfPinAttempts);
+            checkUsernameIsCorrect(username);
         } else {
             System.out.println("Too many attempts failed.");
+            System.exit(0);
         }
-    }
 
-    void checkUserPinIsCorrect(int pinNumber, String username) {
         if (pinNumber != pin) {
             System.out.println("Pin number does not match.\n");
-            checkNumOfPinAttempts(pinNumber);
         } else if (username.equals(user) && pinNumber == pin) {
             cashMachineMenu();
         }

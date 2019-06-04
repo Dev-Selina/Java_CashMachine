@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="924f5455-8833-4ea3-b30e-fba7e4c67c57" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/accountView/CashMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/accountView/CashMachine.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,8 +20,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/accountView/CashMachine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="39" column="54" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
+            <state relative-caret-position="547">
+              <caret line="32" column="95" selection-start-line="32" selection-start-column="95" selection-end-line="32" selection-end-column="95" />
+              <folding>
+                <element signature="method#cashMachineMenu#0;class#CashMachine#0" />
+                <element signature="method#currentAccount#0;class#CashMachine#0" />
+                <element signature="method#checkBalance#0;class#CashMachine#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -43,6 +49,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -57,7 +68,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="995" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="932" />
     <option name="height" value="1047" />
   </component>
@@ -67,6 +79,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Course" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -89,9 +104,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Course" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -149,7 +161,11 @@
       <workItem from="1559214521046" duration="1796000" />
       <workItem from="1559241515399" duration="1478000" />
       <workItem from="1559503450228" duration="6867000" />
-      <workItem from="1559549934537" duration="272000" />
+      <workItem from="1559549934537" duration="5561000" />
+      <workItem from="1559580944091" duration="4715000" />
+      <workItem from="1559679989384" duration="319000" />
+      <workItem from="1559680920137" duration="191000" />
+      <workItem from="1559685435043" duration="884000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit of a cash machine, bare bones system with fixed login details.">
       <created>1559171070173</created>
@@ -197,13 +213,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14619000" />
+    <option name="totallyTimeSpent" value="26017000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12633263" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.102878466" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -213,7 +229,7 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.20801733" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21776815" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -222,9 +238,9 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Educational.CheckDetails" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32936078" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.21885157" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="13" visible="true" weight="0.21343446" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.21343446" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -251,8 +267,13 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/accountView/CashMachine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="39" column="54" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
+        <state relative-caret-position="547">
+          <caret line="32" column="95" selection-start-line="32" selection-start-column="95" selection-end-line="32" selection-end-column="95" />
+          <folding>
+            <element signature="method#cashMachineMenu#0;class#CashMachine#0" />
+            <element signature="method#currentAccount#0;class#CashMachine#0" />
+            <element signature="method#checkBalance#0;class#CashMachine#0" />
+          </folding>
         </state>
       </provider>
     </entry>
