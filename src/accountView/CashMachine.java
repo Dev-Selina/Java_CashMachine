@@ -13,13 +13,13 @@ public class CashMachine {
         System.out.println("User: ");
         String username = in.next();
         checkUsernameIsCorrect(username);
-        pinIsEntered(username);
+        pinIsEntered();
     }
 
-    private int pinIsEntered(String username) {
+    private int pinIsEntered() {
         System.out.println("Pin: ");
         int pinNumber = in.nextInt();
-        checkUserPinIsCorrect(pinNumber, username);
+        checkPinIsCorrect(pinNumber);
         return pinNumber;
     }
 
@@ -39,23 +39,24 @@ public class CashMachine {
         return username;
     }
 
-    void checkUserPinIsCorrect(int pinNumber, String username) {
+    void checkPinIsCorrect(int pinNumber) {
+        if(pinNumber == pin) {
+        cashMachineMenu();
+        }
         numberOfPinAttempts = numberOfPinAttempts + 1;
-
-        if (numberOfPinAttempts <= 3) {
-            //check complete
+        if (numberOfPinAttempts <= 2) {
             System.out.println("checking...\nAttempt no: " + numberOfPinAttempts);
-            checkUsernameIsCorrect(username);
+            pinIsEntered();
         } else {
-            System.out.println("Too many attempts failed.");
+            System.out.println("Attempt no: " + numberOfPinAttempts + "\nToo many attempts failed.");
             System.exit(0);
         }
-
-        if (pinNumber != pin) {
-            System.out.println("Pin number does not match.\n");
-        } else if (username.equals(user) && pinNumber == pin) {
-            cashMachineMenu();
-        }
+//
+//        if (pinNumber != pin) {
+//            System.out.println("Pin number does not match.\n");
+//        } else if (username.equals(user) && pinNumber == pin) {
+//            cashMachineMenu();
+//        }
     }
 
     void cashMachineMenu() {

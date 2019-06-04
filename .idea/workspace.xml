@@ -20,13 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/accountView/CashMachine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="32" column="95" selection-start-line="32" selection-start-column="95" selection-end-line="32" selection-end-column="95" />
-              <folding>
-                <element signature="method#cashMachineMenu#0;class#CashMachine#0" />
-                <element signature="method#currentAccount#0;class#CashMachine#0" />
-                <element signature="method#checkBalance#0;class#CashMachine#0" />
-              </folding>
+            <state relative-caret-position="566">
+              <caret line="59" column="5" lean-forward="true" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -56,6 +51,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -165,7 +165,7 @@
       <workItem from="1559580944091" duration="4715000" />
       <workItem from="1559679989384" duration="319000" />
       <workItem from="1559680920137" duration="191000" />
-      <workItem from="1559685435043" duration="884000" />
+      <workItem from="1559685435043" duration="1936000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit of a cash machine, bare bones system with fixed login details.">
       <created>1559171070173</created>
@@ -209,11 +209,18 @@
       <option name="project" value="LOCAL" />
       <updated>1559517869796</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added 3 attempts for pin and username then terminates program if failed.">
+      <created>1559686444513</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1559686444513</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26017000" />
+    <option name="totallyTimeSpent" value="27069000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -262,18 +269,14 @@
     <MESSAGE value="Adding a check function to check username entered matches and pin number matches" />
     <MESSAGE value="progress commit; adding conditionals for when pin and user don't match at different stages and splitting into smaller methods." />
     <MESSAGE value="Issues with username arg in login function, need to re-do." />
-    <option name="LAST_COMMIT_MESSAGE" value="Issues with username arg in login function, need to re-do." />
+    <MESSAGE value="Added 3 attempts for pin and username then terminates program if failed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added 3 attempts for pin and username then terminates program if failed." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/accountView/CashMachine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="32" column="95" selection-start-line="32" selection-start-column="95" selection-end-line="32" selection-end-column="95" />
-          <folding>
-            <element signature="method#cashMachineMenu#0;class#CashMachine#0" />
-            <element signature="method#currentAccount#0;class#CashMachine#0" />
-            <element signature="method#checkBalance#0;class#CashMachine#0" />
-          </folding>
+        <state relative-caret-position="566">
+          <caret line="59" column="5" lean-forward="true" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
         </state>
       </provider>
     </entry>
